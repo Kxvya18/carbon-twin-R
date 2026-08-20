@@ -1,4 +1,4 @@
-````markdown 
+
 # CarbonTwin-R — Research Simulator
 
 **Causal temporal/graph machine learning for counterfactual detection, attribution and quantification of avoidable carbon emissions.**
@@ -587,4 +587,4 @@ Important limitations include:
 - Final performance comparisons and research conclusions have therefore not yet been frozen.
 
 These limitations are explicitly documented so implementation progress is not confused with empirical validation.
-````
+
