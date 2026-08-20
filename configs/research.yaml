@@ -1,0 +1,12 @@
+# Higher-cost experiment settings. Start with configs/real_uci.yaml first.
+base_config: configs/real_uci.yaml
+search_budget: research
+seeds: [7, 21, 42, 84, 101]
+fault_types:
+  - hvac_efficiency_drift
+  - standby_load
+  - lighting_schedule
+  - sensor_bias
+severities: [0.05, 0.10, 0.18, 0.25]
+start_fractions: [0.55, 0.65, 0.75]
+zones: [1, 2, 4, 8]

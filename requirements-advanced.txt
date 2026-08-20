@@ -1,0 +1,6 @@
+# Optional research extensions. Install only after the core pipeline works.
+xgboost>=2.0
+torch>=2.2
+torch-geometric>=2.5
+econml>=0.15
+shap>=0.45

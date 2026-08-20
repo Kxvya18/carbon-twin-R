@@ -1,0 +1,129 @@
+# ==============================
+# PYTHON ENVIRONMENTS
+# ==============================
+
+.venv/
+venv/
+env/
+ENV/
+
+# ==============================
+# SECRETS / ENVIRONMENT VARIABLES
+# ==============================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# ==============================
+# PYTHON CACHE
+# ==============================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# BUILD / PACKAGING
+# ==============================
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ==============================
+# JUPYTER
+# ==============================
+
+.ipynb_checkpoints/
+
+# ==============================
+# IDE / OS
+# ==============================
+
+.DS_Store
+.idea/
+.vscode/
+
+*.swp
+*.swo
+
+# ==============================
+# RAW / GENERATED DATA
+# ==============================
+
+data/raw/
+data/silver/
+data/gold/
+data/interim/
+data/processed/
+
+# Allow tiny public sample data
+!data/sample/
+!data/sample/**
+
+# ==============================
+# TRAINED MODELS
+# ==============================
+
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# ==============================
+# LARGE EXPERIMENT OUTPUTS
+# ==============================
+
+outputs/
+
+artifacts/models/
+artifacts/checkpoints/
+artifacts/experiments/
+
+# ==============================
+# DATABASES
+# ==============================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================
+# LOGS
+# ==============================
+
+*.log
+logs/
+
+# ==============================
+# TEMP / CACHE
+# ==============================
+
+tmp/
+temp/
+.cache/
+
+# ==============================
+# ARCHIVES
+# ==============================
+
+*.zip
+*.tar
+*.tar.gz
+*.7z

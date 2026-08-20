@@ -1,0 +1,73 @@
+seed: 42
+
+project:
+  dataset_name: uci_appliances_energy_prediction
+  dataset_id: 374
+  dataset_license: CC_BY_4_0
+  raw_dir: data/raw/uci_appliances
+  silver_dir: data/silver/uci_appliances
+  gold_dir: data/gold/uci_appliances
+  artifact_dir: outputs/research
+
+split:
+  train_fraction: 0.60
+  selection_fraction: 0.15
+  conformal_fraction: 0.10
+  test_fraction: 0.15
+
+features:
+  target: Appliances
+  exclude_columns: [rv1, rv2]
+  target_lags: [1, 6, 144]
+  rolling_windows: [6, 36, 144]
+  use_target_history: false
+  room_graph_variables: [T1, RH_1, T2, RH_2, T3, RH_3, T4, RH_4, T5, RH_5, T6, RH_6, T7, RH_7, T8, RH_8, T9, RH_9]
+
+model_selection:
+  selection_metric: mae
+  cv_splits: 4
+  budget: quick
+  n_iter_quick: 3
+  n_iter_research: 20
+  candidates: [elastic_net, random_forest, extra_trees, hist_gradient_boosting]
+
+uncertainty:
+  alpha: 0.05
+
+kalman:
+  q: 0.05
+  r: 50.0
+  critical_degradation_wh: 20.0
+
+cusum:
+  drift: 5.0
+  threshold: 120.0
+
+sprt:
+  healthy_mean: 0.0
+  degraded_mean: 30.0
+  sigma: 40.0
+  alpha: 0.05
+  beta: 0.10
+
+simulation:
+  fault_type: hvac_efficiency_drift
+  severity: 0.18
+  start_fraction: 0.65
+  ramp_steps: 600
+  zone: 2
+
+carbon:
+  mode: scenario_constant
+  kg_per_kwh: 0.23
+  note: "Scenario emissions factor only; replace with a location/time-specific series for real emissions accounting."
+
+fine_tuning:
+  enabled: false
+  trigger_on_drift: true
+  drift_ks_threshold: 0.20
+  pretrain_epochs: 8
+  finetune_epochs: 4
+  learning_rate: 0.001
+  finetune_learning_rate: 0.0002
+  sequence_length: 36

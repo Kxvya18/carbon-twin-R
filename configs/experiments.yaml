@@ -1,0 +1,7 @@
+seeds: [1, 7, 42]
+fault_types:
+  - gradual_cooling
+  - sudden_cooling
+  - stuck_fan
+  - lighting_schedule
+severities: [0.08, 0.15, 0.25]
