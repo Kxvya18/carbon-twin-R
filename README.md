@@ -1,15 +1,15 @@
-````markdown name=README.md
+````markdown 
 # CarbonTwin-R — Research Simulator
 
 **Causal temporal/graph machine learning for counterfactual detection, attribution and quantification of avoidable carbon emissions.**
 
-CarbonTwin-R is an **active research project** investigating whether a machine-learning digital twin can distinguish normal energy variability from persistent operational degradation, localize the affected subsystem, estimate avoidable energy/carbon emissions, and evaluate possible interventions.
+CarbonTwin-R is an **active research project** investigating whether a machine-learning digital twin can distinguish normal energy variability from persistent operational degradation, localize the affected subsystem, and estimate avoidable carbon impact under controlled scenarios.
 
-The system uses a **real measured building-energy dataset by default** and combines data engineering, temporal machine learning, probabilistic uncertainty, sequential change detection, graph-based localization, causal inference and optimization within a reproducible research pipeline.
+The system uses a **real measured building-energy dataset by default** and combines data engineering, temporal machine learning, probabilistic uncertainty, sequential change detection, graph-based localization, carbon accounting logic and causal inference into one reproducible research pipeline.
 
 > **Research Status:** Active development and empirical evaluation.
 >
-> The end-to-end data, modelling, simulation, causal-analysis, API and interactive experimentation pipeline has been implemented. Current work focuses on improving counterfactual prediction under temporal distribution shift, reducing false alarms in degradation detection, improving Carbon Debt estimation, strengthening uncertainty calibration, and completing large-scale multi-scenario evaluation before making final performance claims.
+> The end-to-end data, modelling, simulation, causal-analysis, API and interactive experimentation pipeline has been implemented. Current work focuses on improving counterfactual prediction under temporal shift, reducing false alarms in degradation detection and calibrating Carbon Debt estimates.
 
 ---
 
